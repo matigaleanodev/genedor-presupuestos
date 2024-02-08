@@ -2,11 +2,11 @@ export interface BudgetDetail {
   id: number;
   description: string;
   amount: number;
-  detailType: DetailType;
+  amountType: AmountType;
   unitPrice: number;
 }
 
-export interface DetailType {
+export interface AmountType {
   id: Number;
   name: string;
   symbol: string;

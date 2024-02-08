@@ -1,7 +1,7 @@
-import { BudgetDetail } from './budget-detail.model';
+import { BudgetDetail } from './doc-detail.model';
 import { Client } from './client.model';
 
-export interface Budget {
+export interface Doc {
   id: number;
   name: string;
   detail: BudgetDetail[];
