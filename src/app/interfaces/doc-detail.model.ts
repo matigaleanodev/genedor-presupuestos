@@ -1,4 +1,4 @@
-export interface BudgetDetail {
+export interface DocDetail {
   id: number;
   description: string;
   amount: number;
