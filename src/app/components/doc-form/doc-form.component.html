@@ -1,9 +1,38 @@
-<form [formGroup]="form" class="container">
+<form [formGroup]="form" class="container" autocomplete="off">
   <div class="row">
-    <div class="col-auto">
+    <div class="col-4">
       <div class="form-group">
         <label class="form-label" for="name">Nombre</label>
         <input class="form-control" type="text" name="name" id="name" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="form-group">
+        <label class="form-label" for="cliente">Nombre</label>
+        <div class="input-group">
+          <ng-select
+            #selectElement
+            style="width: calc(100% - 46px)"
+            labelForId="cliente"
+            formControlName="client"
+          >
+            @for (client of clients; track client.id) {
+            <ng-option
+              [value]="client.id"
+              [ariaSelected]="clients.length === 1"
+            >
+              {{ client.name }}
+            </ng-option>
+            }
+          </ng-select>
+          <button
+            (click)="addClient()"
+            class="input-group-text justify-content-center btn-height"
+            type="button"
+          >
+            <i class="text-primary fa-solid fa-user-plus"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>

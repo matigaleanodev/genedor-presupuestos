@@ -5,6 +5,8 @@ export interface Client {
   phone: Phone;
 }
 
+export type Clients = Client[];
+
 export interface Direction {
   id: number;
   street: string;
