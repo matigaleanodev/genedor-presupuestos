@@ -1,5 +1,5 @@
 import { Component, Input, LOCALE_ID } from '@angular/core';
-import { Docs } from '../interfaces/doc.model';
+import { Docs } from '../../interfaces/doc.model';
 import { CurrencyPipe, DatePipe, registerLocaleData } from '@angular/common';
 import localeEsAr from '@angular/common/locales/es-AR';
 

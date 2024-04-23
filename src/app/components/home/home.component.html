@@ -1,7 +1,14 @@
-<div class="row">
-  <doc-form />
-</div>
+@if (viewMode === 'onDoc') {
+
+<div class="row"></div>
+} @else if (viewMode === 'onList') {
 <div class="row">
   <doc-list [docs]="docList" />
 </div>
-<div class="row"></div>
+
+} @else {
+<div class="row">
+  <doc-form />
+</div>
+
+}
