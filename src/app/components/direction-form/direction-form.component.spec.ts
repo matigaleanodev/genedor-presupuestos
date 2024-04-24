@@ -8,16 +8,15 @@ describe('DirectionFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DirectionFormComponent]
-    })
-    .compileComponents();
-    
+      imports: [DirectionFormComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(DirectionFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it(`should create`, () => {
     expect(component).toBeTruthy();
   });
 });

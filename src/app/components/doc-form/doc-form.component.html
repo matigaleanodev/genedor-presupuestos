@@ -35,5 +35,23 @@
         </div>
       </div>
     </div>
+    <div class="col-4">
+      <div class="form-group">
+        <label class="form-label" for="type"> Tipo de medida </label>
+        <div class="input-group">
+          <ng-select
+            #selectElement
+            style="width: calc(100% - 46px)"
+            labelForId="type"
+          >
+            @for (type of amountTypes(); track type.id) {
+            <ng-option [value]="type.id" [ariaSelected]="clients.length === 1">
+              {{ type.name }}
+            </ng-option>
+            }
+          </ng-select>
+        </div>
+      </div>
+    </div>
   </div>
 </form>

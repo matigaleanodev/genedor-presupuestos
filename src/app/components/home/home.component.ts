@@ -16,4 +16,8 @@ export class HomeComponent {
   docList: Docs = [];
 
   viewMode: ViewMode = 'onList';
+
+  onNewDoc() {
+    this.viewMode = 'onForm';
+  }
 }

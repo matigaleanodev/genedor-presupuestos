@@ -9,6 +9,7 @@ import { DocDetail } from '../../interfaces/doc-detail.model';
 import { FormService } from '../../services/form.service';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { Clients } from '../../interfaces/client.model';
+import { DocService } from '../../services/doc.service';
 
 @Component({
   selector: 'doc-form',
@@ -18,7 +19,10 @@ import { Clients } from '../../interfaces/client.model';
   styleUrl: './doc-form.component.scss',
 })
 export class DocFormComponent {
-  _service = inject(FormService);
+  private _service = inject(FormService);
+  private _docService = inject(DocService);
+
+  amountTypes = this._docService.amountTypeList;
 
   clients: Clients = [
     {
