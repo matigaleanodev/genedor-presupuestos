@@ -7,14 +7,13 @@ import {
 } from '@angular/forms';
 import { DocDetail } from '../../interfaces/doc-detail.model';
 import { FormService } from '../../services/form.service';
-import { NgSelectModule } from '@ng-select/ng-select';
 import { Clients } from '../../interfaces/client.model';
 import { DocService } from '../../services/doc.service';
 
 @Component({
   selector: 'doc-form',
   standalone: true,
-  imports: [ReactiveFormsModule, NgSelectModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './doc-form.component.html',
   styleUrl: './doc-form.component.scss',
 })

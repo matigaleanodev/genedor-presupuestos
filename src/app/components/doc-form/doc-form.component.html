@@ -10,21 +10,6 @@
       <div class="form-group">
         <label class="form-label" for="cliente">Nombre</label>
         <div class="input-group">
-          <ng-select
-            #selectElement
-            style="width: calc(100% - 46px)"
-            labelForId="cliente"
-            formControlName="client"
-          >
-            @for (client of clients; track client.id) {
-            <ng-option
-              [value]="client.id"
-              [ariaSelected]="clients.length === 1"
-            >
-              {{ client.name }}
-            </ng-option>
-            }
-          </ng-select>
           <button
             (click)="addClient()"
             class="input-group-text justify-content-center btn-height"
@@ -38,19 +23,7 @@
     <div class="col-4">
       <div class="form-group">
         <label class="form-label" for="type"> Tipo de medida </label>
-        <div class="input-group">
-          <ng-select
-            #selectElement
-            style="width: calc(100% - 46px)"
-            labelForId="type"
-          >
-            @for (type of amountTypes(); track type.id) {
-            <ng-option [value]="type.id" [ariaSelected]="clients.length === 1">
-              {{ type.name }}
-            </ng-option>
-            }
-          </ng-select>
-        </div>
+        <div class="input-group"></div>
       </div>
     </div>
   </div>
